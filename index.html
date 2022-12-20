@@ -5,36 +5,75 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
 
   <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
-  
+
+  <link rel="stylesheet" href="style.css">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@400;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@700&display=swap" rel="stylesheet">
+
   <title>Frontend Mentor | E-commerce product page</title>
 
   <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
-  <style>
-    .attribution { font-size: 11px; text-align: center; }
-    .attribution a { color: hsl(228, 45%, 44%); }
-  </style>
+
+  <script src="./script.js" defer></script>
 </head>
 <body>
 
-  Collections
-  Men
-  Women
-  About
-  Contact
+  <header>
+    <button class="mobile-nav-btn open-btn" onclick="toggleMenu()"><img src="./images/icon-menu.svg" alt="menu button"></button>
+    <div class="logo">sneak ers</div>
+    <div class="nav">
+      <button class="mobile-nav-btn close-btn" onclick="toggleMenu()"><img src="./images/icon-close.svg" alt="close menu button"></button>
+      <ul>
+        <li>Collections</li>
+        <li>Men</li>
+        <li>Women</li>
+        <li>About</li>
+        <li>Contact</li>
+      </ul>
+    </div>
+    <img src="./images/icon-cart.svg" alt="cart icon" class="icon-cart">
+    <img src="./images/image-avatar.png" alt="avatar" class="user-avatar">
+  </header>
 
-  Sneaker Company
+  <div class="product">
 
-  Fall Limited Edition Sneakers
+    <div class="product--images">
+      <div class="carousel">
+        <img src="./images/image-product-1.jpg" alt="product image">
+      </div>
+      <ul class="flex hide">
+        <li><img src="./images/image-product-1-thumbnail.jpg" alt="image 1 thumb"></li>
+        <li><img src="./images/image-product-2-thumbnail.jpg" alt="image 2 thumb"></li>
+        <li><img src="./images/image-product-3-thumbnail.jpg" alt="image 3 thumb"></li>
+        <li><img src="./images/image-product-4-thumbnail.jpg" alt="image 4 thumb"></li>
+      </ul>
+    </div>
+    <div class="product--details grid">
+      <p class="product-brand txt-orange fs-400 uppercase bold">Sneaker Company</p>
+      <h1 class="product-title bold fs-700">Fall Limited Edition Sneakers</h1>
+      <p class="product-description txt-dark-gray fs-400">
+        These low-profile sneakers are your perfect casual wear companion. Featuring a 
+        durable rubber outer sole, they’ll withstand everything the weather can offer.
+      </p>
+      <div class="product-price flex">
+        <div class="flex">
+          <div class="current-price fs-700 bold">$125.00</div>
+          <span class="discount fs-400 txt-orange bold">50%</span>
+        </div>
+        <div class="original-price fs-400 txt-gray bold" style="text-decoration:line-through">$250.00</div>
+      </div>
+      <div class="product-buy grid">
+        <div class="product-qtt bold fs-500">
+          <span class="txt-orange fs-600">-</span>0<span class="txt-orange fs-600">+</span>
+        </div>
+        <button class="add-to-cart-btn txt-white fs-400 bold"><img src="./images/icon-cart-white.svg" alt="cart image">Add to cart</button>
+      </div>
+    </div>
 
-  These low-profile sneakers are your perfect casual wear companion. Featuring a 
-  durable rubber outer sole, they’ll withstand everything the weather can offer.
-
-  $125.00
-  50%
-  $250.00
-
-  0
-  Add to cart
+  </div>
   
   <div class="attribution">
     Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
