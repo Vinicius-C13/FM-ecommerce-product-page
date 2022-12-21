@@ -298,14 +298,15 @@ hr {display: none;}
 
 .product {
     margin-inline: auto;
-    max-width: 1200px;
+    max-width: 1080px;
 }
 
 .product-qtt > span:hover, 
 button:hover, 
 img.icon-cart, 
 img.user-avatar, 
-.nav > ul > li:hover, 
+.nav > ul > li:hover,
+.carousel:hover,
 .carousel-menu > * {
     cursor: pointer;
 }
@@ -395,11 +396,30 @@ ul > li > img {opacity: .5;}
     .product-qtt {padding: 0 10px}
 
     .carousel-popup {
-        position: absolute;
-        z-index: 10;
+        position: fixed;
+        width: 100%;
+        height: 100%;
+        z-index: 20;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        background-color: rgba(0, 0, 0, 0.8);
     }
 
-    .product--images.pop-up {
-        max-width: 30vw;
+    .carousel-popup .product--images {
+        width: clamp(200px, 40vw, 400px);
+    }
+
+    .carousel-popup-btn {
+        display: block;
+        padding: 10px 0px;
+        background-color: transparent;
+        margin-left: auto;
+    }
+
+
+    .hide {
+        display: none;
     }
 }

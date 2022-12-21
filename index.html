@@ -20,6 +20,27 @@
   <script src="./script.js" defer></script>
 </head>
 <body>
+
+  <div class="carousel-popup hide">
+    <div class="product--images">
+      <button class="carousel-popup-btn" onclick="toggleCarouselPopUp()"><img src="./images/icon-close-orange.svg" alt="close carousel button"></button>
+      <div class="carousel">
+          <div class="images-container">
+            <img src="./images/image-product-1.jpg" class="carousel-item" class="item-1" alt="product image">
+            <img src="./images/image-product-2.jpg" class="carousel-item" class="item-2" alt="product image">
+            <img src="./images/image-product-3.jpg" class="carousel-item" class="item-3" alt="product image">
+            <img src="./images/image-product-4.jpg" class="carousel-item" class="item-4" alt="product image">
+          </div>
+        <button class="previous" onclick="carouselPopUp().prevSlide()"><img src="./images/icon-previous.svg"></button><button onclick="carouselPopUp().nextSlide()" class="next"><img src="./images/icon-next.svg"></button>
+      </div>
+      <ul class="carousel-menu">
+        <li onclick="carouselPopUp().selectSlide(1)" class="current"><img src="./images/image-product-1-thumbnail.jpg" alt="image 1 thumb"></li>
+        <li onclick="carouselPopUp().selectSlide(2)"><img src="./images/image-product-2-thumbnail.jpg" alt="image 2 thumb"></li>
+        <li onclick="carouselPopUp().selectSlide(3)"><img src="./images/image-product-3-thumbnail.jpg" alt="image 3 thumb"></li>
+        <li onclick="carouselPopUp().selectSlide(4)"><img src="./images/image-product-4-thumbnail.jpg" alt="image 4 thumb"></li>
+      </ul>
+    </div>
+  </div>
   
   <header>
     <button class="mobile-nav-btn open-btn" onclick="toggleMenu()"><img src="./images/icon-menu.svg" alt="menu button"></button>
@@ -43,19 +64,19 @@
 
     <div class="product--images">
       <div class="carousel">
-          <div class="images-container">
+          <div class="images-container" onclick="toggleCarouselPopUp()">
             <img src="./images/image-product-1.jpg" class="carousel-item" class="item-1" alt="product image">
             <img src="./images/image-product-2.jpg" class="carousel-item" class="item-2" alt="product image">
             <img src="./images/image-product-3.jpg" class="carousel-item" class="item-3" alt="product image">
             <img src="./images/image-product-4.jpg" class="carousel-item" class="item-4" alt="product image">
           </div>
-        <button class="previous" onclick="carousel.prevSlide()"><img src="./images/icon-previous.svg"></button><button onclick="carousel.nextSlide()" class="next"><img src="./images/icon-next.svg"></button>
+        <button class="previous" onclick="carousel().prevSlide()"><img src="./images/icon-previous.svg"></button><button onclick="carousel().nextSlide()" class="next"><img src="./images/icon-next.svg"></button>
       </div>
       <ul class="carousel-menu">
-        <li onclick="carousel.selectSlide(1)" class="current"><img src="./images/image-product-1-thumbnail.jpg" alt="image 1 thumb"></li>
-        <li onclick="carousel.selectSlide(2)"><img src="./images/image-product-2-thumbnail.jpg" alt="image 2 thumb"></li>
-        <li onclick="carousel.selectSlide(3)"><img src="./images/image-product-3-thumbnail.jpg" alt="image 3 thumb"></li>
-        <li onclick="carousel.selectSlide(4)"><img src="./images/image-product-4-thumbnail.jpg" alt="image 4 thumb"></li>
+        <li onclick="carousel().selectSlide(1)" class="current"><img src="./images/image-product-1-thumbnail.jpg" alt="image 1 thumb"></li>
+        <li onclick="carousel().selectSlide(2)"><img src="./images/image-product-2-thumbnail.jpg" alt="image 2 thumb"></li>
+        <li onclick="carousel().selectSlide(3)"><img src="./images/image-product-3-thumbnail.jpg" alt="image 3 thumb"></li>
+        <li onclick="carousel().selectSlide(4)"><img src="./images/image-product-4-thumbnail.jpg" alt="image 4 thumb"></li>
       </ul>
     </div>
     <div class="product--details grid">
