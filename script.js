@@ -7,9 +7,10 @@ const carousel = (() => {
 
     let currentSlideIndex = 1;
     const slidesNumber = document.querySelector('.images-container').children.length;
+    let slidesGap = 10;
 
     function nextSlide() {
-        const slideWidth = Number(document.querySelector('.carousel-item').offsetWidth);
+        const slideWidth = Number(document.querySelector('.carousel-item').offsetWidth) + slidesGap;
         const carousel = document.querySelector('.images-container');
 
         if(currentSlideIndex < slidesNumber) {
@@ -19,7 +20,7 @@ const carousel = (() => {
     }
 
     function prevSlide() {
-        const slideWidth = Number(document.querySelector('.carousel-item').offsetWidth);
+        const slideWidth = Number(document.querySelector('.carousel-item').offsetWidth) + slidesGap;
         const carousel = document.querySelector('.images-container');
 
         if(currentSlideIndex > 1) {
