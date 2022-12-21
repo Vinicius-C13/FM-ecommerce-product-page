@@ -42,7 +42,13 @@
 
     <div class="product--images">
       <div class="carousel">
-        <img src="./images/image-product-1.jpg" alt="product image">
+          <div class="images-container">
+            <img src="./images/image-product-1.jpg" class="carousel-item" id="item-1" alt="product image">
+            <img src="./images/image-product-2.jpg" class="carousel-item" id="item-2" alt="product image">
+            <img src="./images/image-product-3.jpg" class="carousel-item" id="item-3" alt="product image">
+            <img src="./images/image-product-4.jpg" class="carousel-item" id="item-4" alt="product image">
+          </div>
+        <button class="previous" onclick="carousel.prevSlide()"><img src="./images/icon-previous.svg"></button><button onclick="carousel.nextSlide()" class="next"><img src="./images/icon-next.svg"></button>
       </div>
       <ul class="flex hide">
         <li><img src="./images/image-product-1-thumbnail.jpg" alt="image 1 thumb"></li>
