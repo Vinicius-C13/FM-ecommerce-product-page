@@ -20,7 +20,7 @@
   <script src="./script.js" defer></script>
 </head>
 <body>
-
+  
   <header>
     <button class="mobile-nav-btn open-btn" onclick="toggleMenu()"><img src="./images/icon-menu.svg" alt="menu button"></button>
     <div class="logo">sneak ers</div>
@@ -44,18 +44,18 @@
     <div class="product--images">
       <div class="carousel">
           <div class="images-container">
-            <img src="./images/image-product-1.jpg" class="carousel-item" id="item-1" alt="product image">
-            <img src="./images/image-product-2.jpg" class="carousel-item" id="item-2" alt="product image">
-            <img src="./images/image-product-3.jpg" class="carousel-item" id="item-3" alt="product image">
-            <img src="./images/image-product-4.jpg" class="carousel-item" id="item-4" alt="product image">
+            <img src="./images/image-product-1.jpg" class="carousel-item" class="item-1" alt="product image">
+            <img src="./images/image-product-2.jpg" class="carousel-item" class="item-2" alt="product image">
+            <img src="./images/image-product-3.jpg" class="carousel-item" class="item-3" alt="product image">
+            <img src="./images/image-product-4.jpg" class="carousel-item" class="item-4" alt="product image">
           </div>
         <button class="previous" onclick="carousel.prevSlide()"><img src="./images/icon-previous.svg"></button><button onclick="carousel.nextSlide()" class="next"><img src="./images/icon-next.svg"></button>
       </div>
-      <ul class="carousel-menu hide">
-        <li><img src="./images/image-product-1-thumbnail.jpg" alt="image 1 thumb"></li>
-        <li><img src="./images/image-product-2-thumbnail.jpg" alt="image 2 thumb"></li>
-        <li><img src="./images/image-product-3-thumbnail.jpg" alt="image 3 thumb"></li>
-        <li><img src="./images/image-product-4-thumbnail.jpg" alt="image 4 thumb"></li>
+      <ul class="carousel-menu">
+        <li onclick="carousel.selectSlide(1)" class="current"><img src="./images/image-product-1-thumbnail.jpg" alt="image 1 thumb"></li>
+        <li onclick="carousel.selectSlide(2)"><img src="./images/image-product-2-thumbnail.jpg" alt="image 2 thumb"></li>
+        <li onclick="carousel.selectSlide(3)"><img src="./images/image-product-3-thumbnail.jpg" alt="image 3 thumb"></li>
+        <li onclick="carousel.selectSlide(4)"><img src="./images/image-product-4-thumbnail.jpg" alt="image 4 thumb"></li>
       </ul>
     </div>
     <div class="product--details grid">

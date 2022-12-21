@@ -301,6 +301,21 @@ hr {display: none;}
     max-width: 1200px;
 }
 
+.product-qtt > span:hover, 
+button:hover, 
+img.icon-cart, 
+img.user-avatar, 
+.nav > ul > li:hover, 
+.carousel-menu > * {
+    cursor: pointer;
+}
+
+.carousel-menu {display: none;}
+
+ul > li > img {opacity: .5;}
+
+.current > *{opacity: 1;}
+
 @media(min-width: 45em) {
 
     .logo {
@@ -378,4 +393,13 @@ hr {display: none;}
     }
     
     .product-qtt {padding: 0 10px}
+
+    .carousel-popup {
+        position: absolute;
+        z-index: 10;
+    }
+
+    .product--images.pop-up {
+        max-width: 30vw;
+    }
 }
