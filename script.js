@@ -150,6 +150,7 @@ function updateCart() {
 function cleanCart() {
     productsInCart = 0;
     updateCart();
+    toggleIcon();
 }
 
 function oneMore() {
@@ -162,11 +163,30 @@ function oneLess() {
     counter.textContent = Number(counter.textContent) > 0 ? Number(counter.textContent) - 1 : 0;
 }
 
-function addToCart() {
-    let number = Number(document.querySelector(".add-to-cart > div > span").textContent);
+function resetCounter() {
+    const counter = document.querySelector(".add-to-cart > div > span");
+    counter.textContent = 0;
+}
 
-    if(number > 0)
+function addToCart() {
+    const number = Number(document.querySelector(".add-to-cart > div > span").textContent);
+
+
+    if(number > 0) {
         productsInCart = number;
-    else
-        return 
+        toggleIcon()
+        resetCounter();
+    }
+    else {return} 
+}
+
+function toggleIcon() {
+    const icon = document.querySelector(".icon-cart > span");
+
+    if(productsInCart === 0) {
+        icon.classList.add('hide');
+    } else {
+        icon.classList.remove('hide');
+        icon.textContent = productsInCart;
+    } 
 }

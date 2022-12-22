@@ -23,7 +23,7 @@
 
   <div class="carousel-popup hide">
     <div class="product--images">
-      <button class="carousel-popup-btn" onclick="toggleCarouselPopUp()"><img src="./images/icon-close-orange.svg" alt="close carousel button"></button>
+      <button class="carousel-popup-btn pointer" onclick="toggleCarouselPopUp()"><img src="./images/icon-close-orange.svg" alt="close carousel button"></button>
       <div class="carousel">
           <div class="images-container">
             <img src="./images/image-product-1.jpg" class="carousel-item" class="item-1" alt="product image">
@@ -46,7 +46,7 @@
     <button class="mobile-nav-btn open-btn pointer" onclick="toggleMenu()"><img src="./images/icon-menu.svg" alt="menu button"></button>
     <div class="logo">sneak ers</div>
     <div class="nav">
-      <button class="mobile-nav-btn close-btn" onclick="toggleMenu()"><img src="./images/icon-close.svg" alt="close menu button"></button>
+      <button class="mobile-nav-btn close-btn pointer" onclick="toggleMenu()"><img src="./images/icon-close.svg" alt="close menu button"></button>
       <ul>
         <li>Collections</li>
         <li>Men</li>
@@ -55,18 +55,22 @@
         <li>Contact</li>
       </ul>
     </div>
-    <div class="icon-cart pointer" onclick="toggleCartMenu()"><img src="./images/icon-cart.svg" alt="cart icon"><span class="qtt-icon">1</span></div>
+    <div class="icon-cart pointer" onclick="toggleCartMenu()">
+      <img src="./images/icon-cart.svg" alt="cart icon">
+      <span class="qtt-icon txt-white fs-200 bold hide"></span>
+    </div>
     <img src="./images/image-avatar.png" alt="avatar" class="user-avatar pointer">
-  </header>
-  <hr>
-
-  <div class="product grid">
 
     <div class="cart-menu fs-400 grid hide">
       <div class="bold">Cart</div>
       <div class="container-product txt-dark-gray grid">
       </div> 
     </div>
+    
+  </header>
+  <hr>
+
+  <div class="product grid">
 
     <div class="product--images">
       <div class="carousel">
